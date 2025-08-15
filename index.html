@@ -171,6 +171,14 @@
         .label-theme { color: #90EE90; } /* Vert clair */
         .label-justification { color: #FFD700; } /* Jaune d'or */
 
+        /* Style pour les liens des cours */
+        .checkbox-list label a {
+            color: inherit; /* Inherit color from parent label */
+            text-decoration: none; /* Remove underline */
+        }
+        .checkbox-list label a:hover {
+            text-decoration: underline; /* Add underline on hover for links */
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -324,7 +332,7 @@
                 <div class="module-card">
                     <h4><span class="font-bold">Bloc 2</span> : Concevoir un projet de transformation et/ou d’innovation</h4>
                     <p>📚 <span class="label-module font-semibold">Module :</span> M3 : Définir le modèle économique</p>
-                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B2_M3_001_Le budget digital et les décisions d’investissement"</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B2_M3_001_Le budget digital et les décisions d’investissement", "B2_M3_002_Calculer la rentabilité d’un projet digital"</p>
                     <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce thème aborde directement le sujet de l'<strong>allocation budgétaire</strong>. Vous y apprendrez à gérer et à optimiser les coûts liés à la promotion et à la publicité en ligne, assurant ainsi un planning d'action efficace et rentable.</p>
                 </div>
 
@@ -430,20 +438,20 @@
                             <div class="progress-bar" id="b1m1-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b1m1">
-                            <label><input type="checkbox"> B1_M1_001_La place de la stratégie digitale dans la stratégie globale de l'entreprise</label>
-                            <label><input type="checkbox"> B1_M1_002_L'environnement technologique et son impact sur l'entreprise</label>
-                            <label><input type="checkbox"> B1_M1_003_La culture et les valeurs de l'entreprise</label>
-                            <label class="highlighted"><input type="checkbox"> B1_M1_004_Les études de marché</label>
-                            <label class="highlighted"><input type="checkbox"> B1_M1_005_La notion de concurrence et diversité concurrentielle</label>
-                            <label class="highlighted"><input type="checkbox"> B1_M1_006_Le benchmark digital</label>
-                            <label class="highlighted"><input type="checkbox"> B1_M1_007_Le recueil et l'analyse des besoins</label>
-                            <label><input type="checkbox"> B1_M1_008_Identifier et comprendre le client et sa demande</label>
-                            <label class="highlighted"><input type="checkbox"> B1_M1_009_Le brief digital</label>
+                            <label><input type="checkbox"> <a href="https://mmpa1974.github.io/B1_M1_001_La-place-de-la-strategie-digitale-dans-la-strategie-globale-de-l-entreprise/">B1_M1_001_La place de la stratégie digitale dans la stratégie globale de l'entreprise</a></label>
+                            <label><input type="checkbox"> <a href="https://mmpa1974.github.io/B1_M1_002_L-environnement-technologique-et-son-impact-sur-l-entreprise/">B1_M1_002_L'environnement technologique et son impact sur l'entreprise</a></label>
+                            <label><input type="checkbox"> <a href="https://mmpa1974.github.io/B1_M1_003_La-culture-et-les-valeurs-de-l-entreprise/">B1_M1_003_La culture et les valeurs de l'entreprise</a></label>
+                            <label class="highlighted"><input type="checkbox" checked> <a href="https://mmpa1974.github.io/B1_M1_004_Les-etudes-de-marche/">B1_M1_004_Les études de marché</a></label>
+                            <label class="highlighted"><input type="checkbox" checked> <a href="https://mmpa1974.github.io/B1_M1_005_La-notion-de-concurrence-et-diversite-concurrentielle/">B1_M1_005_La notion de concurrence et diversité concurrentielle</a></label>
+                            <label class="highlighted"><input type="checkbox" checked> <a href="https://mmpa1974.github.io/B1_M1_006_Le-benchmark-digital/">B1_M1_006_Le benchmark digital</a></label>
+                            <label class="highlighted"><input type="checkbox" checked> <a href="https://mmpa1974.github.io/B1_M1_007_Le-recueil-et-l-analyse-des-besoins/">B1_M1_007_Le recueil et l'analyse des besoins</a></label>
+                            <label><input type="checkbox"> <a href="https://mmpa1974.github.io/B1_M1_008_Identifier-et-comprendre-le-client-et-sa-demande/">B1_M1_008_Identifier et comprendre le client et sa demande</a></label>
+                            <label class="highlighted"><input type="checkbox"> <a href="https://mmpa1974.github.io/B1_M1_009_Le-brief-digital/">B1_M1_009_Le brief digital</a></label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B1_M2.Elaborer un dispositif de veille scientifique, technique, technologique, réglementaire et concurrentielle</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M2.Elaborer un dispositif de veille scientifique, technique, technologique, réglementaire, sectorielle et concurrentielle</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b1m2-progress">0%</div>
                         </div>
@@ -503,9 +511,13 @@
                             <div class="progress-bar" id="b1m6-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b1m6">
-                            <label><input type="checkbox"> B1_M6_001_La validation des pistes créatives</label>
-                            <label><input type="checkbox"> B1_M6_002_L'évaluation de l'adéquation aux besoins utilisateurs</label>
-                            <label><input type="checkbox"> B1_M6_003_Les méthodes de validation</label>
+                            <label><input type="checkbox"> B1_M6_001_La complémentarité études qualitatives / études quantitatives</label>
+                            <label><input type="checkbox"> B1_M6_002_Les études qualitatives</label>
+                            <label><input type="checkbox"> B1_M6_003_La mise en oeuvre d'études qualitatives</label>
+                            <label><input type="checkbox"> B1_M6_004_Les types d'études quantitatives</label>
+                            <label><input type="checkbox"> B1_M6_005_La réalisation d'une enquête</label>
+                            <label><input type="checkbox"> B1_M6_006_Les méthodes d'échantillonnage</label>
+                            <label><input type="checkbox"> B1_M6_007_Les études à l'épreuve du numérique</label>
                         </div>
                     </div>
                 </div>
@@ -522,14 +534,14 @@
                 </div>
                 <div class="accordion-content hidden" id="content-b2">
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B2_M1.Définir la vision, les valeurs et les objectifs d'un projet</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M1.Elaborer la proposition de valeur d’un projet</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b2m1-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b2m1">
-                            <label><input type="checkbox"> B2_M1_001_La vision et les valeurs du projet</label>
-                            <label><input type="checkbox"> B2_M1_002_Les objectifs du projet et leurs indicateurs de performance</label>
-                            <label><input type="checkbox"> B2_M1_003_Le pilotage du projet par la data</label>
+                            <label><input type="checkbox"> B2_M1_001_Les fondamentaux d'une proposition de valeur</label>
+                            <label><input type="checkbox"> B2_M1_002_Les objectifs d'une proposition de valeur</label>
+                            <label><input type="checkbox"> B2_M1_003_Construire et communiquer sa proposition de valeur</label>
                         </div>
                     </div>
 
@@ -540,8 +552,11 @@
                         </div>
                         <div class="checkbox-list" data-module="b2m2">
                             <label class="highlighted"><input type="checkbox"> B2_M2_001_La planification d'un projet web</label>
-                            <label><input type="checkbox"> B2_M2_002_Le rôle des acteurs du projet</label>
-                            <label><input type="checkbox"> B2_M2_003_Les besoins en ressources humaines, techniques et financières</label>
+                            <label><input type="checkbox"> B2_M2_002_Le rôle de la note de cadrage</label>
+                            <label><input type="checkbox"> B2_M2_003_La rédaction d'un cahier des charges</label>
+                            <label><input type="checkbox"> B2_M2_004_Les différents acteurs du projet</label>
+                            <label><input type="checkbox"> B2_M2_005_Identifier et sélectionner les prestataires et les fournisseurs adaptés aux besoins du projet</label>
+                            <label><input type="checkbox"> B2_M2_006_La construction d'un tableau de bord opérationnel</label>
                         </div>
                     </div>
 
@@ -553,18 +568,32 @@
                         <div class="checkbox-list" data-module="b2m3">
                             <label class="highlighted"><input type="checkbox"> B2_M3_001_Le budget digital et les décisions d’investissement</label>
                             <label class="highlighted"><input type="checkbox"> B2_M3_002_Calculer la rentabilité d’un projet digital</label>
-                            <label><input type="checkbox"> B2_M3_003_Définir le business model du projet</label>
+                            <label><input type="checkbox"> B2_M3_003_L'Executive Summary d'un projet d'innovation</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B2_M4.Présenter le projet et le pitch de vente</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M4.Définir le business plan d'un projet de transformation et/ou d’innovation</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b2m4-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b2m4">
-                            <label><input type="checkbox"> B2_M4_001_La structure d’un pitch de vente</label>
-                            <label><input type="checkbox"> B2_M4_002_La prise de parole en public</label>
+                            <label><input type="checkbox"> B2_M4_001_La préparation et la structuration du business plan</label>
+                            <label><input type="checkbox"> B2_M4_002_La faisabilité économique et financière du business plan</label>
+                            <label><input type="checkbox"> B2_M4_003_Quels chiffres dans un business plan ?</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M5.Défendre la solution sélectionnée/le projet de transformation</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b2m5-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b2m5">
+                            <label><input type="checkbox"> B2_M5_001_Présenter son Business Plan</label>
+                            <label><input type="checkbox"> B2_M5_002_Soutenir son business plan</label>
+                            <label><input type="checkbox"> B2_M5_003_La présentation écrite d'un projet</label>
+                            <label><input type="checkbox"> B2_M5_004_Des présentations de résultats impactantes</label>
                         </div>
                     </div>
                 </div>
@@ -587,22 +616,27 @@
                         </div>
                         <div class="checkbox-list" data-module="b3m1">
                             <label class="highlighted"><input type="checkbox"> B3_M1_001_Identifier ses cibles</label>
-                            <label><input type="checkbox"> B3_M1_002_Les clients internes et externes</label>
-                            <label><input type="checkbox"> B3_M1_003_Les utilisateurs finaux</label>
+                            <label><input type="checkbox"> B3_M1_002_Les objectifs de communication</label>
+                            <label><input type="checkbox"> B3_M1_003_Les cibles en fonction des différents réseaux sociaux</label>
                             <label class="highlighted"><input type="checkbox"> B3_M1_004_La création des personas</label>
                             <label><input type="checkbox"> B3_M1_005_La cartographie des parties prenantes</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B3_M2.Elaborer une stratégie de communication interne</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B3_M2.Concevoir et déployer une stratégie de communication à destination de cibles internes</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b3m2-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b3m2">
-                            <label><input type="checkbox"> B3_M2_001_Les enjeux de la communication interne</label>
-                            <label><input type="checkbox"> B3_M2_002_Les outils et canaux de communication interne</label>
-                            <label><input type="checkbox"> B3_M2_003_Le plan de communication interne</label>
+                            <label><input type="checkbox"> B3_M2_001_La stratégie de communication : le positionnement</label>
+                            <label><input type="checkbox"> B3_M2_002_La stratégie de communication : Les objectifs</label>
+                            <label><input type="checkbox"> B3_M2_003_La stratégie de communication : Les cibles</label>
+                            <label><input type="checkbox"> B3_M2_004_La stratégie de communication : L'axe créatif</label>
+                            <label><input type="checkbox"> B3_M2_005_Le projet de communication</label>
+                            <label><input type="checkbox"> B3_M2_006_Fixer des objectifs SMART</label>
+                            <label><input type="checkbox"> B3_M2_007_Les outils de mesure de l'efficacité</label>
+                            <label><input type="checkbox"> B3_M2_008_La place de la conduite du changement</label>
                         </div>
                     </div>
 
@@ -612,11 +646,25 @@
                             <div class="progress-bar" id="b3m3-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b3m3">
-                            <label><input type="checkbox"> B3_M3_001_Les objectifs de la communication externe</label>
-                            <label><input type="checkbox"> B3_M3_002_Le positionnement et le message</label>
-                            <label><input type="checkbox"> B3_M3_003_Les canaux de communication externe</label>
+                            <label><input type="checkbox"> B3_M3_001_Le positionnement de communication</label>
+                            <label><input type="checkbox"> B3_M3_002_Le rôle du plan de communication</label>
+                            <label><input type="checkbox"> B3_M3_003_Les composantes du plan de communication</label>
                             <label class="highlighted"><input type="checkbox"> B3_M3_004_La définition des médias cible</label>
                             <label class="highlighted"><input type="checkbox"> B3_M3_005_La budgétisation et le calendrier des actions</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B3_M4.Réaliser une campagne de communication créative</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b3m4-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b3m4">
+                            <label><input type="checkbox"> B3_M4_001_Les messages clés dans le cadre d'une communication efficace</label>
+                            <label><input type="checkbox"> B3_M4_002_Structurer son message</label>
+                            <label><input type="checkbox"> B3_M4_003_Production d'un message</label>
+                            <label><input type="checkbox"> B3_M4_004_Le storytelling</label>
+                            <label><input type="checkbox"> B3_M4_005_Les moyens et supports de communication</label>
                         </div>
                     </div>
                 </div>
@@ -633,36 +681,45 @@
                 </div>
                 <div class="accordion-content hidden" id="content-b4">
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B4_M1.Organiser le travail de l'équipe</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M1.Réaliser le prototypage des différentes pistes créatives</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b4m1-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b4m1">
-                            <label><input type="checkbox"> B4_M1_001_Les méthodes agiles</label>
-                            <label><input type="checkbox"> B4_M1_002_Les outils de collaboration</label>
-                            <label><input type="checkbox"> B4_M1_003_La répartition des tâches et des rôles</label>
+                            <label><input type="checkbox"> B4_M1_001_La phase d’idéation</label>
+                            <label><input type="checkbox"> B4_M1_002_Le prototypage de la solution</label>
+                            <label><input type="checkbox"> B4_M1_003_La réalisation de maquettes avec des prototypes UX</label>
+                            <label><input type="checkbox"> B4_M1_004_Introduction au parcours interactif et au prototypage</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B4_M2.Définir et animer les réunions d’équipe</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M2.Observer les utilisateurs durant la phase test</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b4m2-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b4m2">
-                            <label><input type="checkbox"> B4_M2_001_L'animation de réunions efficaces</label>
-                            <label><input type="checkbox"> B4_M2_002_Le suivi des actions et des décisions</label>
+                            <label><input type="checkbox"> B4_M2_001_Test utilisateur</label>
+                            <label><input type="checkbox"> B4_M2_002_Evaluation quantitative de la solution proposée</label>
+                            <label><input type="checkbox"> B4_M2_003_Evaluation qualitative de la solution proposée</label>
+                            <label><input type="checkbox"> B4_M2_004_Recueillir des informations sur les comportements utilisateurs</label>
+                            <label><input type="checkbox"> B4_M2_005_Élaborer les fiches d'observation</label>
+                            <label><input type="checkbox"> B4_M2_006_Construire les rapports de test</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B4_M3.Définir et coordonner les actions à mener</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M3.Concevoir et réaliser une solution d'un projet d’innovation et/ou de transformation</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b4m3-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b4m3">
-                            <label><input type="checkbox"> B4_M3_001_La gestion de projet</label>
-                            <label><input type="checkbox"> B4_M3_002_Les outils de gestion de projet</label>
+                            <label><input type="checkbox"> B4_M3_001_La démarche qualité</label>
+                            <label><input type="checkbox"> B4_M3_002_La mesure de la qualité</label>
+                            <label><input type="checkbox"> B4_M3_003_Les tests qualité selon la nature des livrables</label>
+                            <label><input type="checkbox"> B4_M3_004_Normes et réglementations</label>
+                            <label><input type="checkbox"> B4_M3_005_Low tech</label>
+                            <label><input type="checkbox"> B4_M3_006_Présentation d'une maquette de solution d'innovation ou de transformation</label>
                         </div>
                     </div>
 
@@ -672,8 +729,8 @@
                             <div class="progress-bar" id="b4m4-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b4m4">
-                            <label><input type="checkbox"> B4_M4_001_Les différents types de revues de projet</label>
-                            <label><input type="checkbox"> B4_M4_002_Les participants à une revue de projet</label>
+                            <label><input type="checkbox"> B4_M4_001_La revue de projet dans le cycle de vie d'un projet</label>
+                            <label><input type="checkbox"> B4_M4_002_Les participants à la revue de projet</label>
                             <label class="highlighted"><input type="checkbox"> B4_M4_003_Animer des réunions structurées</label>
                             <label class="highlighted"><input type="checkbox"> B4_M4_004_Les outils d'une revue de projet</label>
                         </div>
@@ -685,7 +742,7 @@
                             <div class="progress-bar" id="b4m5-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b4m5">
-                            <label><input type="checkbox"> B4_M5_001_La mesure de la performance du projet</label>
+                            <label><input type="checkbox"> B4_M5_001_Le cahier des charges des livrables</label>
                             <label class="highlighted"><input type="checkbox"> B4_M5_002_Eléments et critères de mesure de l'expérience client</label>
                             <label class="highlighted"><input type="checkbox"> B4_M5_003_Le management de la qualité des projets</label>
                         </div>
@@ -697,9 +754,9 @@
                             <div class="progress-bar" id="b4m6-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b4m6">
-                            <label><input type="checkbox"> B4_M6_001_La démarche d’amélioration continue</label>
-                            <label><input type="checkbox"> B4_M6_002_Les outils de l’amélioration continue</label>
-                            <label><input type="checkbox"> B4_M6_003_La gestion des retours d’expérience</label>
+                            <label><input type="checkbox"> B4_M6_001_Le suivi des indicateurs qualité et amélioration continue</label>
+                            <label><input type="checkbox"> B4_M6_002_Organiser une gouvernance dans le cadre d'une démarche d'amélioration continue</label>
+                            <label><input type="checkbox"> B4_M6_003_Méthodologie pour piloter un projet digital : une démarche itérative</label>
                             <label class="highlighted"><input type="checkbox"> B4_M6_004_Emettre des recommandations pour les futurs projets</label>
                         </div>
                     </div>
@@ -709,7 +766,7 @@
             <!-- Bloc 5 -->
             <div class="accordion-item" id="block-5">
                 <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b5">
-                    <h4 class="text-xl font-semibold text-orange-400">B5_Mesurer, analyser et interpréter les résultats pour accompagner les équipes dans la prise de décision</h4>
+                    <h4 class="text-xl font-semibold text-orange-400">B5_Manager une équipe projet, une direction technique et/ou une équipe transverse</h4>
                     <span class="accordion-icon text-2xl">+</span>
                 </div>
                 <div class="progress-bar-container mx-4">
@@ -717,47 +774,55 @@
                 </div>
                 <div class="accordion-content hidden" id="content-b5">
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B5_M1.Collecter les données brutes pour alimenter les outils de mesure</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B5_M1.Sélectionner les membres de l’équipe projet (internes et externes)</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b5m1-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b5m1">
-                            <label><input type="checkbox"> B5_M1_001_La data et ses différents types</label>
-                            <label><input type="checkbox"> B5_M1_002_Les outils de collecte de données</label>
-                            <label><input type="checkbox"> B5_M1_003_Les enjeux de la collecte de données</label>
+                            <label><input type="checkbox"> B5_M1_001_Recruter les compétences opérationnelles nécessaires à l'équipe projet digital</label>
+                            <label><input type="checkbox"> B5_M1_002_Les compétences et talents</label>
+                            <label><input type="checkbox"> B5_M1_003_Typologie des organismes de prestataires</label>
+                            <label><input type="checkbox"> B5_M1_004_L'utilité du suivi de la performance</label>
+                            <label><input type="checkbox"> B5_M1_005_La performance et l'évaluation de de la prestation</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B5_M2.Analyser la performance d’une campagne de communication</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B5_M2.Evaluer l’adéquation entre les profils des collaborateurs de l’équipe projet et le besoin en compétences</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b5m2-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b5m2">
-                            <label><input type="checkbox"> B5_M2_001_Les indicateurs clés de performance (KPI)</label>
-                            <label><input type="checkbox"> B5_M2_002_L'analyse des résultats d’une campagne</label>
-                            <label><input type="checkbox"> B5_M2_003_Les outils de reporting et de visualisation des données</label>
+                            <label><input type="checkbox"> B5_M2_001_Cartographier les compétences nécessaires au projet</label>
+                            <label><input type="checkbox"> B5_M2_002_Les compétences comportementales ou softskills</label>
+                            <label><input type="checkbox"> B5_M2_003_La maîtrise des processus</label>
+                            <label><input type="checkbox"> B5_M2_004_Les relations d'équipes face aux tâches</label>
+                            <label><input type="checkbox"> B5_M2_005_L'amélioration du travail en équipe</label>
+                            <label><input type="checkbox"> B5_M2_006_La communication avec l'équipe projet</label>
+                            <label><input type="checkbox"> B5_M2_007_Traiter les dysfonctionnements du travail en équipe</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B5_M3.Accompagner les équipes dans la prise de décision</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B5_M3.Diriger une équipe projet composée d'intervenants internes et externes</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b5m3-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b5m3">
-                            <label><input type="checkbox"> B5_M3_001_La présentation des résultats</label>
-                            <label><input type="checkbox"> B5_M3_002_Le rôle du manager dans la prise de décision</label>
-                            <label><input type="checkbox"> B5_M3_003_L'aide à la décision</label>
+                            <label><input type="checkbox"> B5_M3_001_Communiquer sur son projet pour développer l’adhésion</label>
+                            <label><input type="checkbox"> B5_M3_002_Le business model canvas</label>
+                            <label><input type="checkbox"> B5_M3_003_La présentation écrite d'un projet</label>
+                            <label><input type="checkbox"> B5_M3_004_La politique d'inclusion en entreprise</label>
+                            <label><input type="checkbox"> B5_M3_005_La lutte contre la discrimination</label>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bloc 6 -->
+            <!-- Bloc 6 (Specialisation CDO) -->
             <div class="accordion-item" id="block-6">
                 <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b6">
-                    <h4 class="text-xl font-semibold text-orange-400">B6_Elaborer une stratégie d’amélioration de la performance</h4>
+                    <h4 class="text-xl font-semibold text-orange-400">B6_(Spe. CDO)_Garantir la performance d’un projet de transformation et/ou d’innovation en matière de technique et/ou technologie</h4>
                     <span class="accordion-icon text-2xl">+</span>
                 </div>
                 <div class="progress-bar-container mx-4">
@@ -765,42 +830,81 @@
                 </div>
                 <div class="accordion-content hidden" id="content-b6">
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B6_M1.Analyser et comprendre les performances de l'entreprise</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M1.Piloter un projet de transformation et/ou d’innovation en matière de technique et/ou technologie</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b6m1-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b6m1">
-                            <label><input type="checkbox"> B6_M1_001_Les leviers de la performance</label>
-                            <label><input type="checkbox"> B6_M1_002_Les outils d'analyse de la performance</label>
-                            <label><input type="checkbox"> B6_M1_003_Les enjeux de la performance</label>
+                            <label><input type="checkbox"> B6_M1_001_Les spécificités du projet digital</label>
+                            <label><input type="checkbox"> B6_M1_002_Le recueil de l'analyse des besoins</label>
+                            <label><input type="checkbox"> B6_M1_003_Définir la solution et le projet cibles</label>
+                            <label><input type="checkbox"> B6_M1_004_Définir les objectifs et faire valider l’opportunité du projet</label>
+                            <label><input type="checkbox"> B6_M1_005_Le choix technologique de la solution</label>
+                            <label><input type="checkbox"> B6_M1_006_Le cahier des charges technique : détailler la mise en œuvre</label>
+                            <label><input type="checkbox"> B6_M1_007_Le cahier des charges technique : du besoin à la solution technique</label>
+                            <label><input type="checkbox"> B6_M1_008_La construction du planning</label>
+                            <label><input type="checkbox"> B6_M1_009_Les principaux acteurs d’un projet digital : la maîtrise d’oeuvre</label>
+                            <label><input type="checkbox"> B6_M1_010_Les principaux acteurs d’un projet digital : la maîtrise d’ouvrage</label>
+                            <label><input type="checkbox"> B6_M1_011_Etablir la gouvernance du projet, définir les rôles et les responsabilités</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B6_M2.Proposer des pistes d’amélioration de la performance</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M2.Définir l’architecture technique adaptée au projet</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b6m2-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b6m2">
-                            <label><input type="checkbox"> B6_M2_001_Les méthodes d'amélioration de la performance</label>
-                            <label><input type="checkbox"> B6_M2_002_La mise en place de plans d'action</label>
+                            <label><input type="checkbox"> B6_M2_001_Introduction aux architectures multicouches</label>
+                            <label><input type="checkbox"> B6_M2_002_Les design patterns</label>
+                            <label><input type="checkbox"> B6_M2_003_Les frameworks et ORM</label>
+                            <label><input type="checkbox"> B6_M2_004_Les microservices et architecture distribuée</label>
+                            <label><input type="checkbox"> B6_M2_005_L'éco-conception dans l'architecture logicielle</label>
+                            <label><input type="checkbox"> B6_M2_006_L'offre de service d'un fournisseur de services Cloud</label>
+                            <label><input type="checkbox"> B6_M2_007_Les solutions SaaS et leurs implications architecturales</label>
+                            <label><input type="checkbox"> B6_M2_008_Les principes de sécurité en architecture</label>
+                            <label><input type="checkbox"> B6_M2_009_La réalisation de l'étude de faisabilité</label>
+                            <label><input type="checkbox"> B6_M2_010_Le cahier des charges technique : description fonctionnelle et technique</label>
+                            <label><input type="checkbox"> B6_M2_011_Le cahier des charges techniques : budget, délais et suivi</label>
+                            <label><input type="checkbox"> B6_M2_012_Rédiger un dossier technique d'architecture</label>
                         </div>
                     </div>
 
                     <div class="module-section">
-                        <h5 class="text-lg font-semibold text-yellow-500">B6_M3.Piloter et évaluer les plans d'actions</h5>
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M3.Tester sa solution digitale</h5>
                         <div class="progress-bar-container">
                             <div class="progress-bar" id="b6m3-progress">0%</div>
                         </div>
                         <div class="checkbox-list" data-module="b6m3">
-                            <label><input type="checkbox"> B6_M3_001_Le suivi des plans d'actions</label>
-                            <label><input type="checkbox"> B6_M3_002_L'évaluation de l'efficacité des actions</label>
+                            <label><input type="checkbox"> B6_M3_001_La démarche qualité en développement</label>
+                            <label><input type="checkbox"> B6_M3_002_La démarche DevOps</label>
+                            <label><input type="checkbox"> B6_M3_003_La mise en place de l'intégration continue (CI)</label>
+                            <label><input type="checkbox"> B6_M3_004_La mise en place de la livraison ou déploiement continu (CD)</label>
+                            <label><input type="checkbox"> B6_M3_005_Les enjeux des plans de test</label>
+                            <label><input type="checkbox"> B6_M3_006_Élaborer un scénario de test</label>
+                            <label><input type="checkbox"> B6_M3_007_Mettre en place un environnement de test</label>
+                            <label><input type="checkbox"> B6_M3_008_Les outils et les stratégies des tests de sécurité</label>
+                            <label><input type="checkbox"> B6_M3_009_Planifier efficacement les tests</label>
+                            <label><input type="checkbox"> B6_M3_010_Valider les résultats des tests</label>
+                            <label><input type="checkbox"> B6_M3_011_Automatiser les tests en DevOps</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M4.Emettre des préconisations quant à la résolution de problèmes techniques</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b6m4-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b6m4">
+                            <label><input type="checkbox"> B6_M4_001_La résolution d'une situation critique pour la survie du projet</label>
+                            <label><input type="checkbox"> B6_M4_002_Réaliser une analyse causale à l’aide d’entretiens et d’enquêtes terrain</label>
+                            <label><input type="checkbox"> B6_M4_003_La conception de la solution grâce au Design Thinking</label>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bloc 7 -->
+            <!-- Bloc 7 (Specialisation SD) -->
             <div class="accordion-item" id="block-7">
                 <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b7">
                     <h4 class="text-xl font-semibold text-orange-400">B7_Concevoir et mettre en œuvre de la stratégie de communication (Spécialisation SD)</h4>
@@ -913,6 +1017,7 @@
                         blockTotalItems += moduleCheckboxes.length;
                     });
 
+                    // Ensure blockId correctly maps to the progress bar ID (e.g., 'block-1' -> 'b1-progress')
                     const blockId = block.id.replace('block-', 'b');
                     const blockProgress = (blockTotalItems > 0) ? (blockCheckedItems / blockTotalItems) * 100 : 0;
                     updateProgressBar(`${blockId}-progress`, blockProgress);
@@ -931,20 +1036,30 @@
             // Event listeners for accordions
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', () => {
-                    const content = header.nextElementSibling.nextElementSibling;
-                    const isExpanded = header.getAttribute('aria-expanded') === 'true';
-                    header.setAttribute('aria-expanded', !isExpanded);
-                    content.classList.toggle('hidden');
+                    // Check if the next sibling is a progress bar container, and skip it to get the content
+                    let content = header.nextElementSibling;
+                    if (content && content.classList.contains('progress-bar-container')) {
+                        content = content.nextElementSibling;
+                    }
 
-                    if (!isExpanded) {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        content.style.maxHeight = '0';
+                    if (content) {
+                        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                        header.setAttribute('aria-expanded', !isExpanded);
+                        content.classList.toggle('hidden');
+
+                        if (!isExpanded) {
+                            // Calculate maxHeight for smooth expansion
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                        } else {
+                            content.style.maxHeight = '0';
+                        }
+                        // For a smoother re-render on expand/collapse, recalculate progress bars
+                        updateAllProgress();
                     }
                 });
             });
 
-            // Initialiser l'état des barres de progression
+            // Initialiser l'état des barres de progression au chargement de la page
             updateAllProgress();
         });
     </script>
