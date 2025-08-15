@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse de la Formation MBA Stratégie Digitale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        :root {
+            --bg-color: #0d1117;
+            --card-bg-color: #161b22;
+            --text-color: #e6e6e6;
+            --heading-color: #ffc107;
+            --accent-color-1: #3b82f6;
+            --accent-color-2: #ef4444;
+            --progress-bar-bg: #4b5563;
+            --progress-bar-fill: #10b981;
+            --highlight-color: #e76686; /* Un rose pour mettre en évidence */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            width: 95%;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg-color);
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        h1, h2, h3, h4, h5 {
+            color: var(--heading-color);
+            font-weight: 700;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color-1);
+            padding-bottom: 1rem;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .header-section p {
+            font-style: italic;
+            color: #9ca3af;
+        }
+        .personal-note {
+            background-color: #1f2937;
+            border-left: 4px solid var(--accent-color-2);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+            font-style: italic;
+        }
+        .competence-section {
+            background-color: #1f2937;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #2d3748;
+        }
+        .competence-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color-1);
+        }
+        .module-card {
+            background-color: #2d3748;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+            border: 1px solid #4a5568;
+        }
+        .module-card p, .module-card ul {
+            margin-top: 0.5rem;
+        }
+        .program-section {
+            background-color: #1f2937;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid #2d3748;
+        }
+        .progress-bar-container {
+            width: 100%;
+            background-color: var(--progress-bar-bg);
+            border-radius: 9999px;
+            overflow: hidden;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: var(--progress-bar-fill);
+            transition: width 0.5s ease-in-out;
+            text-align: center;
+            line-height: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        .checkbox-list label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+            margin-left: 1.5rem;
+        }
+        .checkbox-list h5 {
+            font-size: 1.125rem;
+            color: #ffc107;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .checkbox-list input[type="checkbox"] {
+            margin-right: 0.75rem;
+            accent-color: var(--progress-bar-fill);
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        .highlighted {
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+        .highlighted input[type="checkbox"] {
+            accent-color: var(--highlight-color);
+        }
+        .accordion-header {
+            background-color: #2d3748;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .accordion-header:hover {
+            background-color: #4a5568;
+        }
+        .accordion-header[aria-expanded="true"] .accordion-icon {
+            transform: rotate(90deg);
+        }
+        .accordion-content {
+            padding: 0 1rem;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-content.hidden {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .label-module { color: #87CEEB; } /* Bleu clair */
+        .label-theme { color: #90EE90; } /* Vert clair */
+        .label-justification { color: #FFD700; } /* Jaune d'or */
+
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="container">
+        <header class="header-section">
+            <h1>MBA Stratégie Digitale</h1>
+            <p>Analyse détaillée de la formation pour Stéphanie</p>
+        </header>
+
+        <div class="personal-note">
+            <p>
+                Stéphanie, je te donne cette analyse détaillée suite à notre conversation. Pour être totalement transparente, je n'ai pas suivi ce MBA précis, mais une formation très similaire : la certification CDO. Les cinq premiers blocs sont quasiment identiques, il n'y a que le sixième bloc de spécialisation qui diffère. Cette expérience me permet de te donner une analyse argumentée et solide.
+            </p>
+            <p class="highlighted mt-2" style="text-align: justify;">
+                Tu trouveras dans le programme, ci-dessous, les cours et les thèmes qui répondent à tes questions, mis en évidence en rose pour une lecture facilitée.
+            </p>
+        </div>
+
+        <section class="competence-section">
+            <h3>Questions de Stéphanie 🙏</h3>
+            <p class="mb-4">Voici les points clés sur lesquels Stéphanie souhaite des éclaircissements concernant la formation :</p>
+            <ol class="list-decimal list-inside mt-4 space-y-4">
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">📈</span>
+                    <span>Participer à la construction des campagnes (conseil, achat, suivi opérationnel…).</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">🤝</span>
+                    <span>Gestion de la relation client sur les suivis de campagnes.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">📊</span>
+                    <span>Réunir et analyser les données nécessaires à l’élaboration des dossiers d’études (concurrence, ciblage…).</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">🎯</span>
+                    <span>Participer à la conception des études et recommandations media pour un portefeuille de clients.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">🗓️</span>
+                    <span>Optimiser le planning d'action (calendrier - allocation budgétaire).</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">📝</span>
+                    <span>Formaliser les briefs à l'attention des experts media.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">💰</span>
+                    <span>Mettre à jour / contrôler le reporting financier/ suivi administratif (devis, facturation …).</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-2xl">🚀</span>
+                    <span>Coordonner et diffuser les informations nécessaires à la conception des bilans de campagne.</span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section pour chaque compétence de Stéphanie -->
+        <main class="space-y-6">
+            <!-- Compétence 1 -->
+            <section class="competence-section">
+                <h3>1. Participer à la construction des campagnes (conseil, achat, suivi opérationnel…).</h3>
+                <p class="mb-4">Cette compétence est prise en charge de manière exhaustive par deux blocs complémentaires qui couvrent la stratégie, le déploiement et l'exécution.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 3</span> : Concevoir et mettre en œuvre une stratégie de communication interne/externe</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M3 : Elaborer une stratégie de communication à destination de cibles externes</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B3_M3_004_La définition des médias cible", "B3_M3_005_La budgétisation et le calendrier des actions"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module est le fondement du <strong>conseil</strong> et du <strong>planning</strong>. Il vous apprend à définir la stratégie de communication externe et à organiser son déploiement de manière structurée et budgétée, une étape indispensable avant toute action.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 7</span> (Spécialisation SD) : Concevoir et mettre en œuvre de la stratégie de communication</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M1 : Elaborer et déployer une stratégie de brand content</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B7_M1_007_L'orientation artistique et le brief créatif", "B7_M1_008_Introduction à la production de contenus digitaux", "B7_M1_009_La création de contenu digital en adéquation avec sa cible"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ces thèmes vous donnent les outils pour la phase de <strong>conception</strong> et de <strong>briefing créatif</strong>. Vous serez capable de donner des directives claires et d'assurer que le contenu produit est en adéquation avec les objectifs.</p>
+                </div>
+
+                <div class="module-card">
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M2 : Promouvoir un site internet, une application mobile ou une web app</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B7_M2_006_Introduction aux social ads (publicité sur les réseaux sociaux)", "B7_M2_005_Les coûts de promotion", "B7_M2_008_Les moyens et supports de communication"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module répond directement à la phase d'<strong>achat d'espaces</strong> et de <strong>suivi opérationnel</strong>. Vous apprendrez à gérer la publicité sur les réseaux sociaux et à optimiser les coûts de promotion sur les différents supports, assurant une exécution efficace de la campagne.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 2 -->
+            <section class="competence-section">
+                <h3>2. Gestion de la relation client sur les suivis de campagnes.</h3>
+                <p class="mb-4">Cette compétence se développe en combinant une approche stratégique de la cible avec la production de contenus pertinents et engageants.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 3</span> : Concevoir et mettre en œuvre une stratégie de communication interne/externe</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M1 : Identifier les cibles de communication internes / externes et les utilisateurs finaux</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B3_M1_001_Identifier ses cibles", "B3_M1_004_La création des personas"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> La première étape d'une bonne gestion de la relation client est la compréhension. Ce module vous apprend à identifier et à analyser les cibles pour adapter le message et construire une relation durable et pertinente.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 7</span> (Spécialisation SD) : Concevoir et mettre en œuvre de la stratégie de communication</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M1 : Elaborer et déployer une stratégie de brand content</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B7_M1_011_Le brand content et le storytelling digital", "B7_M1_009_La création de contenu digital en adéquation avec sa cible"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> La <strong>gestion de la relation</strong> durant une campagne se fait à travers le contenu. En maîtrisant le <em>brand content</em> et le <em>storytelling</em>, vous créerez des contenus qui suscitent un lien fort avec le client et l'incitent à s'engager, ce qui simplifie grandement le suivi.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 3 -->
+            <section class="competence-section">
+                <h3>3. Réunir et analyser les données nécessaires à l’élaboration des dossiers d’études (concurrence, ciblage…).</h3>
+                <p class="mb-4">Cette compétence est traitée dès le premier bloc, pour fonder l'ensemble de la stratégie sur une analyse rigoureuse.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 1</span> : Animer un processus de problématisation et d’idéation à partir d'une analyse des besoins clients</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M1 : Analyser les besoins de clients internes/externes</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B1_M1_004_Les études de marché", "B1_M1_006_Le benchmark digital", "B1_M1_005_La notion de concurrence et diversité concurrentielle", "B1_M1_007_Le recueil et l'analyse des besoins"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module vous fournit les outils méthodologiques pour collecter et analyser les données, à la fois sur les clients et sur l'environnement concurrentiel. C'est l'étape fondatrice qui permet d'élaborer des dossiers d'études solides et argumentés.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 7</span> (Spécialisation SD) : Concevoir et mettre en œuvre de la stratégie de communication</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M2 : Promouvoir un site internet, une application mobile ou une web app</p>
+                    <p>✨ <span class="label-theme font-semibold">Thème :</span> "B7_M2_011_Les outils de mesure de l'efficacité"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> En complément, ce module vous donne les outils pour l'analyse post-campagne. Vous apprendrez à utiliser les <strong>KPI</strong> et les tableaux de bord pour mesurer l'efficacité de vos actions, des données essentielles pour les dossiers d'études.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 4 -->
+            <section class="competence-section">
+                <h3>4. Participer à la conception des études et recommandations media pour un portefeuille de clients.</h3>
+                <p class="mb-4">Cette capacité est le pont entre l'analyse stratégique et l'exécution, et est couverte par le bloc de spécialisation.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 7</span> (Spécialisation SD) : Concevoir et mettre en œuvre de la stratégie de communication</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M2 : Promouvoir un site internet, une application mobile ou une web app</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B7_M2_007_Les différentes formes de communication", "B7_M2_008_Les moyens et supports de communication", "B7_M2_010_Le multicanal et le mix marketing"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> En maîtrisant ces thèmes, vous serez capable de créer des <strong>recommandations media</strong> adaptées et performantes. Ces modules vous apprennent à choisir les bons canaux (site web, réseaux sociaux) et à les combiner pour construire un mix marketing efficace qui répond aux besoins de votre portefeuille de clients.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 5 -->
+            <section class="competence-section">
+                <h3>5. Optimiser le planning d'action (calendrier - allocation budgétaire).</h3>
+                <p class="mb-4">Cette compétence est prise en charge dès le deuxième bloc pour l'organisation globale du projet, puis est affinée dans le bloc de spécialisation pour les actions de promotion.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 2</span> : Concevoir un projet de transformation et/ou d’innovation</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M2 : Définir l’organisation, les étapes et les besoins en ressources d'un projet</p>
+                    <p>✨ <span class="label-theme font-semibold">Thème :</span> "B2_M2_001_La planification d'un projet web"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module vous donne la méthodologie générale de la planification. Vous apprendrez à structurer votre projet, à définir des jalons et à organiser le calendrier, ce qui est la base de toute optimisation.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 2</span> : Concevoir un projet de transformation et/ou d’innovation</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M3 : Définir le modèle économique</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B2_M3_001_Le budget digital et les décisions d’investissement"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce thème aborde directement le sujet de l'<strong>allocation budgétaire</strong>. Vous y apprendrez à gérer et à optimiser les coûts liés à la promotion et à la publicité en ligne, assurant ainsi un planning d'action efficace et rentable.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 7</span> (Spécialisation SD) : Concevoir et mettre en œuvre de la stratégie de communication</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M2 : Promouvoir un site internet, une application mobile ou une web app</p>
+                    <p>✨ <span class="label-theme font-semibold">Thème :</span> "B7_M2_005_Les coûts de promotion"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce thème complète l'approche budgétaire en se concentrant sur les coûts de promotion spécifiques aux actions digitales, vous permettant d'affiner votre stratégie de dépense.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 6 -->
+            <section class="competence-section">
+                <h3>6. Formaliser les briefs à l'attention des experts media.</h3>
+                <p class="mb-4">La formalisation d'un brief clair et précis est une compétence clé qui est traitée spécifiquement.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 1</span> : Animer un processus de problématisation et d’idéation à partir d'une analyse des besoins clients</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M1 : Analyser les besoins de clients internes/externes</p>
+                    <p>✨ <span class="label-theme font-semibold">Thème :</span> "B1_M1_009_Le brief digital"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module vous donne les outils pour structurer et rédiger un brief complet, qui servira de document de référence pour les équipes créatives et les experts media.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 7</span> (Spécialisation SD) : Concevoir et mettre en œuvre de la stratégie de communication</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M1 : Elaborer et déployer une stratégie de brand content</p>
+                    <p>✨ <span class="label-theme font-semibold">Thème :</span> "B7_M1_007_L'orientation artistique et le brief créatif"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce thème se concentre sur l'aspect créatif du brief, vous apprenant à traduire une stratégie en directives artistiques claires et inspirantes, pour que le brief soit non seulement précis, mais aussi efficace.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 7 -->
+            <section class="competence-section">
+                <h3>7. Mettre à jour / contrôler le reporting financier/ suivi administratif (devis, facturation…).</h3>
+                <p class="mb-4">Cette compétence est abordée à la fois dans le pilotage de projet et dans la gestion des performances de campagne.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 2</span> : Concevoir un projet de transformation et/ou d’innovation</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M3 : Définir le modèle économique</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B2_M3_001_Le budget digital et les décisions d’investissement", "B2_M3_002_Calculer la rentabilité d’un projet digital"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ces thèmes vous donnent les bases pour le <strong>reporting financier</strong> et le contrôle budgétaire, en vous apprenant à évaluer la rentabilité d'un projet, ce qui est la première étape d'un bon suivi administratif.</p>
+                </div>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 4</span> : Piloter un projet d’innovation et/ou de transformation jusqu'à la phase de rendu final</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M5 : Évaluer l'atteinte des objectifs du projet d’innovation et/ou de transformation</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B4_M5_003_Le management de la qualité des projets", "B4_M5_002_Eléments et critères de mesure de l'expérience client"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module est essentiel pour le <strong>suivi administratif</strong>. Il vous permet de valider la qualité et l'efficacité de vos actions, des informations cruciales pour justifier les devis et les factures auprès des clients.</p>
+                </div>
+            </section>
+
+            <!-- Compétence 8 -->
+            <section class="competence-section">
+                <h3>8. Coordonner et diffuser les informations nécessaires à la conception des bilans de campagne.</h3>
+                <p class="mb-4">Cette compétence est couverte par le bloc de pilotage de projet et l'amélioration continue.</p>
+
+                <div class="module-card">
+                    <h4><span class="font-bold">Bloc 4</span> : Piloter un projet d’innovation et/ou de transformation jusqu'à la phase de rendu final</h4>
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M4 : Piloter des revues de projet</p>
+                    <p>✨ <span class="label-theme font-semibold">Thèmes :</span> "B4_M4_003_Animer des réunions structurées", "B4_M4_004_Les outils d'une revue de projet"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> Ce module vous donne les compétences pour la <strong>coordination</strong>. Vous apprendrez à organiser et à animer des réunions de bilan de manière structurée, en utilisant des outils adaptés pour diffuser les informations de manière claire et efficace.</p>
+                </div>
+
+                <div class="module-card">
+                    <p>📚 <span class="label-module font-semibold">Module :</span> M6 : Piloter une démarche d’amélioration continue</p>
+                    <p>✨ <span class="label-theme font-semibold">Thème :</span> "B4_M6_004_Emettre des recommandations pour les futurs projets"</p>
+                    <p>💡 <span class="label-justification font-semibold">Justification :</span> La conception d'un bilan ne se limite pas à la simple compilation de données. Ce module vous apprend à transformer ces données en recommandations concrètes pour les futurs projets, faisant du bilan un véritable outil de <strong>décision stratégique</strong>.</p>
+                </div>
+            </section>
+        </main>
+
+        <section class="competence-section">
+            <h3>Conclusion</h3>
+            <p style="text-align: justify;">
+                J'espère que ce document est plus clair et qu'il répond à tes attentes. N'hésite pas à me solliciter si tu as d'autres questions ou si tu souhaites que j'apporte des modifications.
+            </p>
+        </section>
+
+        <div class="program-section">
+            <h2 class="text-2xl font-bold mb-4">Programme complet de la formation (par blocs et modules)</h2>
+
+            <!-- Barre de progression générale -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold text-orange-400">Progression Générale</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="overall-progress">0%</div>
+                </div>
+            </div>
+
+            <!-- Bloc 1 -->
+            <div class="accordion-item" id="block-1">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b1">
+                    <h4 class="text-xl font-semibold text-orange-400">B1_Animer un processus de problématisation et d’idéation à partir d'une analyse des besoins clients</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b1-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b1">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M1.Analyser les besoins de clients internes/externes</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b1m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b1m1">
+                            <label><input type="checkbox"> B1_M1_001_La place de la stratégie digitale dans la stratégie globale de l'entreprise</label>
+                            <label><input type="checkbox"> B1_M1_002_L'environnement technologique et son impact sur l'entreprise</label>
+                            <label><input type="checkbox"> B1_M1_003_La culture et les valeurs de l'entreprise</label>
+                            <label class="highlighted"><input type="checkbox"> B1_M1_004_Les études de marché</label>
+                            <label class="highlighted"><input type="checkbox"> B1_M1_005_La notion de concurrence et diversité concurrentielle</label>
+                            <label class="highlighted"><input type="checkbox"> B1_M1_006_Le benchmark digital</label>
+                            <label class="highlighted"><input type="checkbox"> B1_M1_007_Le recueil et l'analyse des besoins</label>
+                            <label><input type="checkbox"> B1_M1_008_Identifier et comprendre le client et sa demande</label>
+                            <label class="highlighted"><input type="checkbox"> B1_M1_009_Le brief digital</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M2.Elaborer un dispositif de veille scientifique, technique, technologique, réglementaire et concurrentielle</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b1m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b1m2">
+                            <label><input type="checkbox"> B1_M2_001_La démarche de veille</label>
+                            <label><input type="checkbox"> B1_M2_002_La veille technologique : sources, référents, outils et bonnes pratiques</label>
+                            <label><input type="checkbox"> B1_M2_003_La veille concurrentielle et sectorielle</label>
+                            <label><input type="checkbox"> B1_M2_004_Les autres types de veille</label>
+                            <label><input type="checkbox"> B1_M2_005_Les matrices de veille</label>
+                            <label><input type="checkbox"> B1_M2_006_L'évaluation de la fiabilité du dispositif de veille</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M3.Interpréter et articuler une problématique en matière de projet d’innovation et/ou de transformation à un commanditaire</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b1m3-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b1m3">
+                            <label><input type="checkbox"> B1_M3_001_La problématique d'innovation ou de transformation</label>
+                            <label><input type="checkbox"> B1_M3_002_Orienter le projet d'innovation sur le client final</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M4.Identifier et analyser l’ensemble des risques pour la réussite du projet</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b1m4-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b1m4">
+                            <label><input type="checkbox"> B1_M4_001_Analyse des contraintes dans la mise en oeuvre d'un projet</label>
+                            <label><input type="checkbox"> B1_M4_002_Analyse des risques d'un projet</label>
+                            <label><input type="checkbox"> B1_M4_003_Analyse de l'impact d'un projet</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M5.Animer un processus créatif de production, développement et communication</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b1m5-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b1m5">
+                            <label><input type="checkbox"> B1_M5_001_Apprendre à générer des idées</label>
+                            <label><input type="checkbox"> B1_M5_002_Design Thinking : Définir la problématique</label>
+                            <label><input type="checkbox"> B1_M5_003_Design Thinking : La phase d’idéation</label>
+                            <label><input type="checkbox"> B1_M5_004_Design Thinking : La phase de prototypage de la solution</label>
+                            <label><input type="checkbox"> B1_M5_005_Design Thinking : La phase de test de la solution</label>
+                            <label><input type="checkbox"> B1_M5_006_Design Thinking : La phase de d'itération</label>
+                            <label><input type="checkbox"> B1_M5_007_Animer un atelier de brainstorming</label>
+                            <label><input type="checkbox"> B1_M5_008_Préparer et présenter un dossier de conception</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B1_M6.Evaluer l’adéquation des pistes créatives aux besoins des utilisateurs finaux</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b1m6-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b1m6">
+                            <label><input type="checkbox"> B1_M6_001_La validation des pistes créatives</label>
+                            <label><input type="checkbox"> B1_M6_002_L'évaluation de l'adéquation aux besoins utilisateurs</label>
+                            <label><input type="checkbox"> B1_M6_003_Les méthodes de validation</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 2 -->
+            <div class="accordion-item" id="block-2">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b2">
+                    <h4 class="text-xl font-semibold text-orange-400">B2_Concevoir un projet de transformation et/ou d’innovation</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b2-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b2">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M1.Définir la vision, les valeurs et les objectifs d'un projet</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b2m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b2m1">
+                            <label><input type="checkbox"> B2_M1_001_La vision et les valeurs du projet</label>
+                            <label><input type="checkbox"> B2_M1_002_Les objectifs du projet et leurs indicateurs de performance</label>
+                            <label><input type="checkbox"> B2_M1_003_Le pilotage du projet par la data</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M2.Définir l’organisation, les étapes et les besoins en ressources d'un projet</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b2m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b2m2">
+                            <label class="highlighted"><input type="checkbox"> B2_M2_001_La planification d'un projet web</label>
+                            <label><input type="checkbox"> B2_M2_002_Le rôle des acteurs du projet</label>
+                            <label><input type="checkbox"> B2_M2_003_Les besoins en ressources humaines, techniques et financières</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M3.Définir le modèle économique</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b2m3-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b2m3">
+                            <label class="highlighted"><input type="checkbox"> B2_M3_001_Le budget digital et les décisions d’investissement</label>
+                            <label class="highlighted"><input type="checkbox"> B2_M3_002_Calculer la rentabilité d’un projet digital</label>
+                            <label><input type="checkbox"> B2_M3_003_Définir le business model du projet</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B2_M4.Présenter le projet et le pitch de vente</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b2m4-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b2m4">
+                            <label><input type="checkbox"> B2_M4_001_La structure d’un pitch de vente</label>
+                            <label><input type="checkbox"> B2_M4_002_La prise de parole en public</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 3 -->
+            <div class="accordion-item" id="block-3">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b3">
+                    <h4 class="text-xl font-semibold text-orange-400">B3_Concevoir et mettre en œuvre une stratégie de communication interne/externe</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b3-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b3">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B3_M1.Identifier les cibles de communication internes / externes et les utilisateurs finaux</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b3m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b3m1">
+                            <label class="highlighted"><input type="checkbox"> B3_M1_001_Identifier ses cibles</label>
+                            <label><input type="checkbox"> B3_M1_002_Les clients internes et externes</label>
+                            <label><input type="checkbox"> B3_M1_003_Les utilisateurs finaux</label>
+                            <label class="highlighted"><input type="checkbox"> B3_M1_004_La création des personas</label>
+                            <label><input type="checkbox"> B3_M1_005_La cartographie des parties prenantes</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B3_M2.Elaborer une stratégie de communication interne</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b3m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b3m2">
+                            <label><input type="checkbox"> B3_M2_001_Les enjeux de la communication interne</label>
+                            <label><input type="checkbox"> B3_M2_002_Les outils et canaux de communication interne</label>
+                            <label><input type="checkbox"> B3_M2_003_Le plan de communication interne</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B3_M3.Elaborer une stratégie de communication à destination de cibles externes</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b3m3-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b3m3">
+                            <label><input type="checkbox"> B3_M3_001_Les objectifs de la communication externe</label>
+                            <label><input type="checkbox"> B3_M3_002_Le positionnement et le message</label>
+                            <label><input type="checkbox"> B3_M3_003_Les canaux de communication externe</label>
+                            <label class="highlighted"><input type="checkbox"> B3_M3_004_La définition des médias cible</label>
+                            <label class="highlighted"><input type="checkbox"> B3_M3_005_La budgétisation et le calendrier des actions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 4 -->
+            <div class="accordion-item" id="block-4">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b4">
+                    <h4 class="text-xl font-semibold text-orange-400">B4_Piloter un projet d’innovation et/ou de transformation jusqu'à la phase de rendu final</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b4-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b4">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M1.Organiser le travail de l'équipe</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b4m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b4m1">
+                            <label><input type="checkbox"> B4_M1_001_Les méthodes agiles</label>
+                            <label><input type="checkbox"> B4_M1_002_Les outils de collaboration</label>
+                            <label><input type="checkbox"> B4_M1_003_La répartition des tâches et des rôles</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M2.Définir et animer les réunions d’équipe</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b4m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b4m2">
+                            <label><input type="checkbox"> B4_M2_001_L'animation de réunions efficaces</label>
+                            <label><input type="checkbox"> B4_M2_002_Le suivi des actions et des décisions</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M3.Définir et coordonner les actions à mener</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b4m3-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b4m3">
+                            <label><input type="checkbox"> B4_M3_001_La gestion de projet</label>
+                            <label><input type="checkbox"> B4_M3_002_Les outils de gestion de projet</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M4.Piloter des revues de projet</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b4m4-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b4m4">
+                            <label><input type="checkbox"> B4_M4_001_Les différents types de revues de projet</label>
+                            <label><input type="checkbox"> B4_M4_002_Les participants à une revue de projet</label>
+                            <label class="highlighted"><input type="checkbox"> B4_M4_003_Animer des réunions structurées</label>
+                            <label class="highlighted"><input type="checkbox"> B4_M4_004_Les outils d'une revue de projet</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M5.Évaluer l'atteinte des objectifs du projet d’innovation et/ou de transformation</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b4m5-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b4m5">
+                            <label><input type="checkbox"> B4_M5_001_La mesure de la performance du projet</label>
+                            <label class="highlighted"><input type="checkbox"> B4_M5_002_Eléments et critères de mesure de l'expérience client</label>
+                            <label class="highlighted"><input type="checkbox"> B4_M5_003_Le management de la qualité des projets</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B4_M6.Piloter une démarche d’amélioration continue</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b4m6-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b4m6">
+                            <label><input type="checkbox"> B4_M6_001_La démarche d’amélioration continue</label>
+                            <label><input type="checkbox"> B4_M6_002_Les outils de l’amélioration continue</label>
+                            <label><input type="checkbox"> B4_M6_003_La gestion des retours d’expérience</label>
+                            <label class="highlighted"><input type="checkbox"> B4_M6_004_Emettre des recommandations pour les futurs projets</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 5 -->
+            <div class="accordion-item" id="block-5">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b5">
+                    <h4 class="text-xl font-semibold text-orange-400">B5_Mesurer, analyser et interpréter les résultats pour accompagner les équipes dans la prise de décision</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b5-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b5">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B5_M1.Collecter les données brutes pour alimenter les outils de mesure</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b5m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b5m1">
+                            <label><input type="checkbox"> B5_M1_001_La data et ses différents types</label>
+                            <label><input type="checkbox"> B5_M1_002_Les outils de collecte de données</label>
+                            <label><input type="checkbox"> B5_M1_003_Les enjeux de la collecte de données</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B5_M2.Analyser la performance d’une campagne de communication</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b5m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b5m2">
+                            <label><input type="checkbox"> B5_M2_001_Les indicateurs clés de performance (KPI)</label>
+                            <label><input type="checkbox"> B5_M2_002_L'analyse des résultats d’une campagne</label>
+                            <label><input type="checkbox"> B5_M2_003_Les outils de reporting et de visualisation des données</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B5_M3.Accompagner les équipes dans la prise de décision</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b5m3-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b5m3">
+                            <label><input type="checkbox"> B5_M3_001_La présentation des résultats</label>
+                            <label><input type="checkbox"> B5_M3_002_Le rôle du manager dans la prise de décision</label>
+                            <label><input type="checkbox"> B5_M3_003_L'aide à la décision</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 6 -->
+            <div class="accordion-item" id="block-6">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b6">
+                    <h4 class="text-xl font-semibold text-orange-400">B6_Elaborer une stratégie d’amélioration de la performance</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b6-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b6">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M1.Analyser et comprendre les performances de l'entreprise</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b6m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b6m1">
+                            <label><input type="checkbox"> B6_M1_001_Les leviers de la performance</label>
+                            <label><input type="checkbox"> B6_M1_002_Les outils d'analyse de la performance</label>
+                            <label><input type="checkbox"> B6_M1_003_Les enjeux de la performance</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M2.Proposer des pistes d’amélioration de la performance</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b6m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b6m2">
+                            <label><input type="checkbox"> B6_M2_001_Les méthodes d'amélioration de la performance</label>
+                            <label><input type="checkbox"> B6_M2_002_La mise en place de plans d'action</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B6_M3.Piloter et évaluer les plans d'actions</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b6m3-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b6m3">
+                            <label><input type="checkbox"> B6_M3_001_Le suivi des plans d'actions</label>
+                            <label><input type="checkbox"> B6_M3_002_L'évaluation de l'efficacité des actions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 7 -->
+            <div class="accordion-item" id="block-7">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b7">
+                    <h4 class="text-xl font-semibold text-orange-400">B7_Concevoir et mettre en œuvre de la stratégie de communication (Spécialisation SD)</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b7-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b7">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B7_M1.Elaborer et déployer une stratégie de brand content</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b7m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b7m1">
+                            <label><input type="checkbox"> B7_M1_001_Le brand content et ses enjeux</label>
+                            <label><input type="checkbox"> B7_M1_002_Les formats de brand content</label>
+                            <label><input type="checkbox"> B7_M1_003_Les étapes de création d’une stratégie de brand content</label>
+                            <label><input type="checkbox"> B7_M1_004_Les outils de création de brand content</label>
+                            <label><input type="checkbox"> B7_M1_005_La diffusion du brand content</label>
+                            <label><input type="checkbox"> B7_M1_006_Les KPI de mesure du brand content</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M1_007_L'orientation artistique et le brief créatif</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M1_008_Introduction à la production de contenus digitaux</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M1_009_La création de contenu digital en adéquation avec sa cible</label>
+                            <label><input type="checkbox"> B7_M1_010_Les plateformes de diffusion de brand content</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M1_011_Le brand content et le storytelling digital</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B7_M2.Promouvoir un site internet, une application mobile ou une web app</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b7m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b7m2">
+                            <label><input type="checkbox"> B7_M2_001_Les leviers de la promotion digitale</label>
+                            <label><input type="checkbox"> B7_M2_002_Le référencement naturel (SEO)</label>
+                            <label><input type="checkbox"> B7_M2_003_Le référencement payant (SEA)</label>
+                            <label><input type="checkbox"> B7_M2_004_Les relations publiques digitales</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M2_005_Les coûts de promotion</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M2_006_Introduction aux social ads (publicité sur les réseaux sociaux)</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M2_007_Les différentes formes de communication</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M2_008_Les moyens et supports de communication</label>
+                            <label><input type="checkbox"> B7_M2_009_Les objectifs de la promotion</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M2_010_Le multicanal et le mix marketing</label>
+                            <label class="highlighted"><input type="checkbox"> B7_M2_011_Les outils de mesure de l'efficacité</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloc 8 -->
+            <div class="accordion-item" id="block-8">
+                <div class="accordion-header" role="button" aria-expanded="false" aria-controls="content-b8">
+                    <h4 class="text-xl font-semibold text-orange-400">B8_Préparer et animer un atelier de co-conception</h4>
+                    <span class="accordion-icon text-2xl">+</span>
+                </div>
+                <div class="progress-bar-container mx-4">
+                    <div class="progress-bar" id="b8-progress">0%</div>
+                </div>
+                <div class="accordion-content hidden" id="content-b8">
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B8_M1.La co-conception et ses enjeux</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b8m1-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b8m1">
+                            <label><input type="checkbox"> B8_M1_001_La co-conception</label>
+                            <label><input type="checkbox"> B8_M1_002_Les enjeux de la co-conception</label>
+                        </div>
+                    </div>
+
+                    <div class="module-section">
+                        <h5 class="text-lg font-semibold text-yellow-500">B8_M2.Animer un atelier de co-conception</h5>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="b8m2-progress">0%</div>
+                        </div>
+                        <div class="checkbox-list" data-module="b8m2">
+                            <label><input type="checkbox"> B8_M2_001_Les étapes d'un atelier de co-conception</label>
+                            <label><input type="checkbox"> B8_M2_002_Le rôle du facilitateur</label>
+                            <label><input type="checkbox"> B8_M2_003_Les outils d'un atelier de co-conception</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            const checkboxes = document.querySelectorAll('.program-section input[type="checkbox"]');
+
+            const updateProgressBar = (progressBarId, percentage) => {
+                const progressBar = document.getElementById(progressBarId);
+                if (progressBar) {
+                    progressBar.style.width = `${percentage}%`;
+                    progressBar.textContent = `${Math.round(percentage)}%`;
+                }
+            };
+
+            const updateAllProgress = () => {
+                let totalChecked = 0;
+                let totalItems = 0;
+
+                // Update individual module progress bars and sum for blocks and overall
+                const modules = document.querySelectorAll('.module-section');
+                modules.forEach(module => {
+                    const moduleCheckboxes = module.querySelectorAll('input[type="checkbox"]');
+                    const checkedModuleItems = module.querySelectorAll('input[type="checkbox"]:checked').length;
+                    const totalModuleItems = moduleCheckboxes.length;
+                    const moduleId = module.querySelector('.checkbox-list').dataset.module;
+
+                    const moduleProgress = (totalModuleItems > 0) ? (checkedModuleItems / totalModuleItems) * 100 : 0;
+                    updateProgressBar(`${moduleId}-progress`, moduleProgress);
+
+                    totalChecked += checkedModuleItems;
+                    totalItems += totalModuleItems;
+                });
+
+                // Update individual block progress bars
+                const blocks = document.querySelectorAll('.accordion-item');
+                blocks.forEach(block => {
+                    const blockModules = block.querySelectorAll('.module-section');
+                    let blockCheckedItems = 0;
+                    let blockTotalItems = 0;
+
+                    blockModules.forEach(module => {
+                        const moduleCheckboxes = module.querySelectorAll('input[type="checkbox"]');
+                        blockCheckedItems += module.querySelectorAll('input[type="checkbox"]:checked').length;
+                        blockTotalItems += moduleCheckboxes.length;
+                    });
+
+                    const blockId = block.id.replace('block-', 'b');
+                    const blockProgress = (blockTotalItems > 0) ? (blockCheckedItems / blockTotalItems) * 100 : 0;
+                    updateProgressBar(`${blockId}-progress`, blockProgress);
+                });
+
+                // Update overall progress bar
+                const overallProgress = (totalItems > 0) ? (totalChecked / totalItems) * 100 : 0;
+                updateProgressBar('overall-progress', overallProgress);
+            };
+
+            // Event listeners for checkboxes
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateAllProgress);
+            });
+
+            // Event listeners for accordions
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling.nextElementSibling;
+                    const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                    header.setAttribute('aria-expanded', !isExpanded);
+                    content.classList.toggle('hidden');
+
+                    if (!isExpanded) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = '0';
+                    }
+                });
+            });
+
+            // Initialiser l'état des barres de progression
+            updateAllProgress();
+        });
+    </script>
+</body>
+</html>
